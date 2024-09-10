@@ -71,7 +71,7 @@ jobs:
           ./test.celf
 
       - name: Upload test.celf
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test.celf
           path: test.celf
