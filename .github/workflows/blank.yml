@@ -69,3 +69,29 @@ jobs:
         run: |
           gcc test.c -o test.celf
           ./test.celf
+
+  # This workflow contains a single job called "build"
+  build-py-after:
+    needs: 
+      - build-py
+    
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: after build-py
+        run: echo after build-py
+
+  # This workflow contains a single job called "build"
+  build-c-after:
+    needs: 
+      - build-c
+    
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: after build-c
+        run: echo after build-c
