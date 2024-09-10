@@ -34,3 +34,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      
+      - name: install python3
+        run: apt install -y python3
+      
+      - name: run a test py file
+          python3 test.py
