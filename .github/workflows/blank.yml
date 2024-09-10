@@ -36,7 +36,9 @@ jobs:
           echo test, and deploy your project.
       
       - name: install python3
-        run: apt-get install -y python3
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3
       
       - name: run a test py file
         run: python3 test.py
