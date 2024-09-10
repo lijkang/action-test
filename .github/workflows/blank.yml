@@ -71,10 +71,10 @@ jobs:
           ./test.celf
 
       - name: Upload test.celf
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
-          name: test-celf-artifact
-          path: ${{ github.workspace }}/test.celf
+          name: test.celf
+          path: test.celf
 
   # This workflow contains a single job called "build"
   build-py-after:
