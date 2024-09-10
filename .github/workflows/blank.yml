@@ -70,6 +70,12 @@ jobs:
           gcc test.c -o test.celf
           ./test.celf
 
+      - name: Upload test.celf
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-celf-artifact
+          path: ${{ github.workspace }}/test.celf
+
   # This workflow contains a single job called "build"
   build-py-after:
     needs: 
